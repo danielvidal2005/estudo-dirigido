@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page with Themes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Marchine Learning</h3>
+        <a href="#" onclick="showPage('am')">Aprendizado de Máquina</a>
+        <a href="#" onclick="showPage('rna')">Redes Neurais Artificiais</a>
+        <a href="#" onclick="showPage('pln')">Processamento de Linguagem Natural</a>
+        
+    </div>
+
+    <div class="content">
+        <div id="am" class="page">
+            <h1>Aprendizado de Máquina</h1>
+            <p>Aprendizado de Máquina é um ramo da inteligência artificial que ensina computadores a aprenderem com dados e a tomarem decisões ou fazerem previsões sem serem programados diretamente.</p>
+                <p>Ele funciona com três etapas principais:
+                
+                <li>Treinamento: O sistema aprende padrões em dados fornecidos.</li>
+                <li>Teste: Verifica a precisão usando novos dados.</li>
+                <li>Ajustes: Melhora com base nos resultados.</li>
+                <li>Tipos comuns incluem:Supervisionado (dados rotulados, como prever preços).
+                    Não supervisionado (descobre padrões sozinho, como segmentar clientes).
+                    Reforço (aprende por tentativa e erro, como jogos).
+                    É usado em reconhecimento facial, diagnósticos médicos, carros autônomos, entre outros.</li></p>
+        </div>
+
+        <div id="rna" class="page hidden">
+            <h1>Redes Neurais Artificiais</h1>
+            <p>Redes Neurais Artificiais são modelos computacionais inspirados no cérebro humano, usados para resolver problemas complexos. Elas funcionam como um conjunto de "neurônios" conectados, organizados em camadas, que processam informações e aprendem a reconhecer padrões a partir de dados.
+
+                Cada "neurônio" recebe entradas, realiza cálculos e transmite resultados para os próximos. O aprendizado ocorre ajustando as conexões entre eles até que a rede realize tarefas com alta precisão, como reconhecer imagens, traduzir textos ou prever tendências.
+                
+                São amplamente usadas em reconhecimento facial, veículos autônomos, assistentes virtuais e outras aplicações avançadas de inteligência artificial.</p>
+        </div>
+
+        <div id="pln" class="page hidden">
+            <h1>Processamento de Linguagem Natural</h1>
+            <p>Processamento de Linguagem Natural (PLN) é uma área da inteligência artificial que permite que computadores entendam, interpretem e respondam à linguagem humana. Ele combina linguística e aprendizado de máquina para processar textos ou fala, aproximando a comunicação entre humanos e máquinas.
+
+                Algumas aplicações comuns incluem:
+                
+                Assistentes virtuais (como Alexa ou Siri).
+                Tradução automática (Google Tradutor).
+                Análise de sentimentos (avaliar opiniões em redes sociais).
+                Chatbots (responder perguntas automaticamente).
+                O PLN está presente em diversas tecnologias, tornando a interação com sistemas mais natural e eficie</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
