@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionario Dev - Arquitetura de Banco de Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Arquitetura de Banco de Dados</h3>
+        <a href="#" onclick="showPage('mbd')">Modelos de Bancos de Dados</a>
+        <a href="#" onclick="showPage('abd')">Arquitetura de Banco de Dados</a>
+        <a href="#" onclick="showPage('cbd')">Camadas de Banco de Dados</a>
+        <a href="#" onclick="showPage('mbd')">Modelagem de Banco de Dados</a>
+        <a href="#" onclick="showPage('nrm')">Normalização</a>
+        <a href="#" onclick="showPage('dsnrm')">Desnormalização</a>
+        <a href="#" onclick="showPage('ind')">Índices</a>
+        <a href="#" onclick="showPage('backup')">Backup e Restauração</a>
+        <a href="#" onclick="showPage('tc')">Transações e Controle de Concorrência</a>
+        <a href="#" onclick="showPage('rep')">Replicação e Particionamento</a>
+    </div>
+
+    <div class="content">
+        <div id="mbd" class="page">
+            <h1>Modelos de Bancos de Dados</h1>
+            <p>Os modelos de bancos de dados determinam a forma como os dados são estruturados, armazenados e acessados. Os principais modelos incluem o modelo relacional, o modelo hierárquico e o modelo em rede. O modelo relacional é o mais utilizado, organizando dados em tabelas inter-relacionadas.</p>
+        </div>
+
+        <div id="abd" class="page hidden">
+            <h1>Arquitetura de Banco de Dados</h1>
+            <p>A arquitetura de um banco de dados refere-se à estrutura e organização que permitem a gestão eficiente dos dados. A arquitetura envolve componentes como o banco de dados, o servidor de banco de dados e os sistemas de gerenciamento de banco de dados (DBMS), que juntos garantem a integridade, segurança e desempenho do sistema.</p>
+        </div>
+
+        <div id="cbd" class="page hidden">
+            <h1>Camadas de Banco de Dados</h1>
+            <p>A arquitetura de um banco de dados pode ser dividida em diferentes camadas. As camadas típicas incluem a camada física, onde os dados são realmente armazenados, a camada lógica, que define a estrutura e o relacionamento dos dados, e a camada de visão, que fornece interfaces para os usuários acessarem os dados.</p>
+        </div>
+
+        <div id="mbd" class="page hidden">
+            <h1>Modelagem de Banco de Dados</h1>
+            <p>A modelagem de banco de dados envolve a criação de um modelo que descreve como os dados serão armazenados, organizados e acessados. Isso inclui a definição de tabelas, relacionamentos e restrições. A modelagem pode ser feita usando diagramas ER (Entidade-Relacionamento) para representar a estrutura de dados.</p>
+        </div>
+
+        <div id="nrm" class="page hidden">
+            <h1>Normalização</h1>
+            <p>A normalização é o processo de organizar os dados de um banco de dados para reduzir a redundância e evitar problemas de inconsistência. Isso é feito através da divisão das tabelas em várias outras tabelas e do estabelecimento de chaves primárias e estrangeiras. Existem várias formas normais (1FN, 2FN, 3FN, etc.) para alcançar uma boa normalização.</p>
+        </div>
+
+        <div id="dsnrm" class="page hidden">
+            <h1>Desnormalização</h1>
+            <p>A desnormalização é o processo oposto da normalização, onde se combina tabelas ou adiciona dados redundantes para melhorar a performance, especialmente em consultas complexas. Embora possa aumentar a eficiência, a desnormalização pode levar a problemas de manutenção e consistência de dados.</p>
+        </div>
+
+        <div id="ind" class="page hidden">
+            <h1>Índices</h1>
+            <p>Os índices são estruturas que aceleram as buscas e consultas em um banco de dados. Eles funcionam de maneira similar aos índices em livros, facilitando a localização rápida de dados. Índices podem ser criados em colunas específicas, melhorando a performance de leitura, mas podem afetar a performance de escrita.</p>
+        </div>
+
+        <div id="backup" class="page hidden">
+            <h1>Backup e Restauração</h1>
+            <p>Backup é o processo de criar cópias de segurança dos dados para evitar perdas em caso de falha do sistema. A restauração é o processo de recuperar dados a partir de um backup. Ter estratégias eficazes de backup e restauração é crucial para garantir a continuidade e a segurança dos dados.</p>
+        </div>
+
+        <div id="tc" class="page hidden">
+            <h1>Transações e Controle de Concorrência</h1>
+            <p>As transações são unidades de trabalho que garantem a integridade dos dados, permitindo que múltiplas operações sejam executadas de forma atômica. O controle de concorrência gerencia o acesso simultâneo aos dados, garantindo que as transações sejam executadas de maneira segura e sem causar inconsistências.</p>
+        </div>
+
+        <div id="rep" class="page hidden">
+            <h1>Replicação e Particionamento</h1>
+            <p>A replicação é o processo de criar cópias de dados em diferentes servidores para melhorar a disponibilidade e o desempenho. O particionamento envolve dividir grandes volumes de dados em partes menores para otimizar o desempenho e facilitar o gerenciamento. Ambas as técnicas são importantes para sistemas distribuídos e de grande escala.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
