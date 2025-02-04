@@ -34,3 +34,25 @@ body {
     display: flex;
     
 }
+
+img {
+    width: 100%;
+    height: auto;
+    display: block; /* Transforma a imagem em um elemento de bloco */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto;
+}
+
+/* Para telas menores que 600px */
+@media (max-width: 600px) {
+    img {
+        width: 80%;
+    }
+}
+
+/* Para telas maiores que 1200px */
+@media (min-width: 1200px) {
+    img {
+        width: 50%;
+    }
+}
