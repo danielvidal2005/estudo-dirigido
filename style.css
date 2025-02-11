@@ -1,83 +1,173 @@
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --background: #1a1a2e;
+    --text: #ffffff;
+    --accent: #0f3460;
+    --secondary: #16213e;
+    --highlight: #e94560;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
-    display: flex;
-    
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: column; /* Faz os itens do menu ficarem na vertical */
-    padding: 0;
-    list-style: none;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 10px 0; /* Espaçamento entre os itens */
-}
-
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.sidebar {
-    width: 20%;
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-right: 1px solid #ccc;
-    height: 100vh;
-}
-
-.sidebar a {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    display: grid;
+    grid-template-columns: 150px 250px 1fr;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    background-color: var(--secondary);
+    padding: 2rem 1rem;
+    overflow-y: auto;
+  }
+  
+  .sidebar.left {
+    grid-column: 2;
+  }
+  
+  .sidebar.right {
+    grid-column: 1;
+  }
+  
+  .sidebar h3 {
+    color: var(--highlight);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .sidebar a {
     display: block;
-    color: #333;
+    color: var(--text);
     text-decoration: none;
-    margin: 10px 0;
-    padding: 8px;
-    border-radius: 4px;
-}
-
-.sidebar a:hover {
-    background-color: #ddd;
-}
-
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
-.hidden {
-    display: none;
-}
-
-img {
-    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    background-color: var(--accent);
+  }
+  
+  .content {
+    grid-column: 3;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .page h1 {
+    color: var(--highlight);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .page p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .page img {
+    max-width: 100%;
     height: auto;
-    display: block;
-    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 1024px) {
+    body {
+      grid-template-columns: 1fr;
+    }
+  
+    .sidebar {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+  
+    .sidebar.left {
+      left: 0;
+      transform: translateX(-100%);
+    }
+  
+    .sidebar.right {
+      right: 0;
+      transform: translateX(100%);
+    }
+  
+    .sidebar.active {
+      transform: translateX(0);
+    }
+  
+    .content {
+      grid-column: 1;
+      padding-top: 4rem;
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: fixed;
+      top: 1rem;
+      z-index: 1001;
+      background-color: var(--accent);
+      color: var(--text);
+      border: none;
+      padding: 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .menu-toggle.left {
+      left: 1rem;
+    }
+  
+    .menu-toggle.right {
+      right: 1rem;
+    }
+  }
+  .tituloindex {
+    padding: 50px;
+    overflow-y: auto;
+}
+.tituloindex h1 {
+    color: var(--highlight);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
+.intro p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    img {
-        width: 80%;
-    }
+.intro ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
 }
 
-@media (min-width: 1200px) {
-    img {
-        width: 50%;
-    }
+.intro li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
