@@ -7,17 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Dicionário Dev</h1>
-        <nav>
-            <ul>
-                <li><a href="abd.html">Arquitetura de Banco de Dados</a></li>
-                <li><a href="Marchine_Learning.html">Machine Learning</a></li>
-                <li><a href="iot.html">IOT</a></li>
-            </ul>
-        </nav>
-    </header>
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
     
+    <div class="sidebar right">
+        <h3>Dicionário Dev</h3>
+        <a href="abd.html" onclick="loadHTML('abd.html')">ABD</a>
+        <a href="iot.html" onclick="loadHTML('iot.html')">IOT</a>
+        <a href="Machine_Learning.html" onclick="loadHTML('ml.html')">MACHINE LEARNING</a>
+    </div>
+
+    <main class="content">
+        <h1>Bem-vindo ao Dicionário Dev</h1>
+        <div class="intro">
+            <p>O Dicionário Dev é seu guia completo para os termos e conceitos mais importantes no mundo do desenvolvimento e tecnologia. Aqui você encontrará explicações claras e concisas sobre diversos tópicos, incluindo:</p>
+            <ul>
+                <li>ABD (Administração de Banco de Dados)</li>
+                <li>IOT (Internet das Coisas)</li>
+                <li>Machine Learning (Aprendizado de Máquina)</li>
+            </ul>
+            <p>Navegue pelos tópicos usando o menu lateral para explorar cada área em detalhes. Este dicionário é uma ferramenta valiosa tanto para iniciantes quanto para profissionais experientes que desejam aprimorar seus conhecimentos.</p>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
